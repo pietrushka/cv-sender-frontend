@@ -1,13 +1,18 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import { Root } from "./routes/root";
+import { RootPage } from "./routes/RootPage";
+import { OfferPage } from "./routes/OfferPage";
 import "@fontsource/inter";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <RootPage />,
+  },
+  {
+    path: "/offer/:offerId",
+    element: <OfferPage />,
   },
 ]);
 

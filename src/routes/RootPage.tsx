@@ -3,7 +3,7 @@ import { SingleSelect } from "../components/SingleSelect";
 import { MultiSelect } from "../components/MultiSelect";
 import { OfferList } from "../components/OfferList";
 
-export function Root() {
+export function RootPage() {
   return (
     <main>
       <Box sx={{ display: "flex", gap: 2 }}>

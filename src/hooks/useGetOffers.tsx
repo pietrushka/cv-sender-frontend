@@ -20,7 +20,7 @@ type Pagination = {
   totalItems: number;
 };
 
-const fetchOffers = async (queryString: string) => {
+async function fetchOffers(queryString: string) {
   const response = await fetch(
     process.env.REACT_APP_API_URL + "/offer?" + queryString,
     {
@@ -33,7 +33,7 @@ const fetchOffers = async (queryString: string) => {
     throw new Error("Network response was not ok");
   }
   return response.json();
-};
+}
 
 export const useGetOffers = () => {
   const [offers, setOffers] = useState<Offer[]>([]);
